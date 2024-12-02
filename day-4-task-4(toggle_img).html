@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <title>Toggle Image</title>
+</head>
+<style>
+
+    img{
+        border: 4px solid rgb(142, 81, 1);
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    button{
+        margin-bottom: 0%;
+    }
+</style>
+<body>
+    <center>
+    <img src="../assets/images/tea.jpg" alt="coffee" id="img" width="250px" height="250px">
+    <h2 id="d1">TEA</h2>
+    <h2 id="d2"></h2>
+    <br>
+    <br>
+    <button type="button" onclick="change_img()" class= "btn btn-outline-warning">Change Image</button>      
+    </center>
+   
+    <script>
+        let Is_tea = true;
+
+        function change_img(){
+            if (Is_tea){
+            document.getElementById("img").src= "../assets/images/coffee.jpg";
+            document.getElementById("d1").style.display = "none"; 
+            document.getElementById("d2").innerHTML = "COFFEE";
+            }
+
+            else{
+            document.getElementById("img").src = "../assets/images/tea.jpg";
+            document.getElementById("d1").style.display = "block";
+            document.getElementById("d2").innerHTML = "";
+            }
+            Is_tea = !Is_tea;
+            }
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,93 @@
+<!--
+=======================================TASK-3================================================================
+TASK: Create array of object for 10 employees have keys id, name, post, salary, gender, age, city, state.
+
+1. display all 10 employee information.
+2. display employee information who is manager.
+3. display information of all employee who's gender is female ?
+4. display information of all employee who's age > 55 ?
+5. display information of all employee who belong to Tamil-nadu ? 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let emp = [
+            {id:101, name: "sai", post: "python developer", salary: 25000, gender: "Male", age: 25, city: "chennai", state: "Tamil-Nadu<br>"},
+            {id:102, name: "sam", post: "Java developer", salary: 35000, gender: "Female", age: 32, city: "pune", state: "Maharastra<br>"},
+            {id:103, name: "Kamal", post: "Manager", salary: 140000, gender: "Male", age: 42, city: "chennai", state: "Tamil-Nadu<br>"},
+            {id:104, name: "veloni", post: "Full stack developer", salary: 45000, gender: "Female", age: 56, city: "chennai", state: "Tamil-Nadu<br>"},
+            {id:105, name: "Guru", post: "Manager", salary: 150000, gender: "Male", age: 62, city: "chennai", state: "Tamil-Nadu<br>"},
+            {id:106, name: "Varsha", post: "Angular developer", salary: 65000, gender: "Female", age: 44, city: "mumbai", state: "Maharastra<br>"},
+            {id:107, name: "tom", post: "Network Enginner", salary: 37000, gender: "Male", age: 59, city: "chennai", state: "Tamil-Nadu<br>"},
+            {id:108, name: "sushma", post: "Technical Support", salary: 15000, gender: "Female", age: 63, city: "Nagpur", state: "Maharastra<br>"},
+            {id:109, name: "sandy", post: "Manager", salary: 100000, gender: "Male", age: 52, city: "chennai", state: "Tamil-Nadu<br>"},
+            {id:110, name: "ben", post: "AWS Engineer", salary: 32000, gender: "Male", age: 55, city: "delhi", state: "Maharastra"}
+        ];
+
+
+
+        // 1. display all 10 employee information.
+        document.write("<br><strong>All 10 employee information:</strong><br>");
+        for (let i of emp){
+            document.write(`ID: ${i.id} Name: ${i.name} Post:${i.post} Salary:${i.salary} Gender:${i.gender}
+            Age: ${i.age} City:${i.city} State:${i.state}<br>`);
+        }
+
+
+
+
+        // 2. display employee information who is manager.
+        document.write("<br><strong>Employee information who is Managers:</strong><br>"); 
+        for (let i of emp){ 
+            if (i.post === "Manager") { 
+                document.write(`ID: ${i.id} Name: ${i.name} Post: ${i.post} Salary: ${i.salary} 
+                Gender: ${i.gender} Age: ${i.age} City: ${i.city} State: ${i.state}<br>`); 
+            }
+         }
+
+
+
+         // 3. display information of all employee who's gender is female ?
+         document.write("<br><strong>Employee who's gender is female :</strong><br>"); 
+         for(let i of emp){
+            if(i.gender === "Female"){
+                document.write(`ID: ${i.id} Name: ${i.name} Post: ${i.post} Salary: ${i.salary} 
+                Gender: ${i.gender} Age: ${i.age} City: ${i.city} State: ${i.state}<br>`); 
+            }
+         }
+
+
+
+         // 4. display information of all employee who's age > 55 ?
+         document.write("<br><strong>Employee who's age > 55 :</strong><br>"); 
+         for(let i of emp){
+            if(i.age >= 55){
+                document.write(`ID: ${i.id} Name: ${i.name} Post: ${i.post} Salary: ${i.salary} 
+                Gender: ${i.gender} Age: ${i.age} City: ${i.city} State: ${i.state}<br>`); 
+            }
+         }
+
+
+
+        //  5. display information of all employee who belong to Tamil-nadu ? 
+        document.write("<br><strong>Employee who belong to Tamil-nadu:</strong><br>"); 
+        for(let i of emp){
+            if(i.state.trim() === "Tamil-Nadu"){
+                document.write(`ID: ${i.id} Name: ${i.name} Post: ${i.post} Salary: ${i.salary} 
+                Gender: ${i.gender} Age: ${i.age} City: ${i.city} State: ${i.state}<br>`);    
+            }
+        }
+    </script>
+</body>
+</html>

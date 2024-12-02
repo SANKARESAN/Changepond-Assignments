@@ -1,0 +1,67 @@
+<!--
+TASK : perform form validation for password, email, contact, gender?
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form_validation.js">
+    <title>Document</title>
+</head>
+<style>
+    .form{
+        border: 3px solid goldenrod;
+        margin: 100px;
+        width:400px;
+        padding: 50px;
+    }
+</style>
+<body>
+    <form class="form" name="myform" onsubmit="data()">
+
+        <div>
+            <label for="name">Enter your Full_Name:</label>
+            <input type="text" name="name" id="name">
+        </div>
+<br>
+
+        <div>
+            <label for="pwd">Enter your Password:</label>
+            <input type="password" name="pwd" id="pwd">
+        </div>
+<br>
+        
+        <div>
+            <label for="email">Enter your Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+<br>
+
+        <div>
+            <label for="contact">Enter your Contact:</label>
+            <input type="tel" name="contact" id="contact">
+        </div>
+<br>
+
+        <div>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="gender">Male
+            <input type="radio" name="gender" id="gender">Female
+            <input type="radio" name="gender" id="gender">Others
+        </div>  
+<br>
+
+        <div>
+            <label for>Select your Qualifications:</label>
+            <input type="checkbox" name="edu" id="ssc">SSC
+            <input type="checkbox" name="edu" id="hsc">HSC
+            <input type="checkbox" name="edu" id="ug">UG
+            <input type="checkbox" name="edu" id="pg">PG
+        </div>
+<br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
