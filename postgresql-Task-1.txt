@@ -1,0 +1,44 @@
+
+TASK-1
+
+
+select * from payment where amount > 5;
+select * from payment where amount < 5;
+
+select * from payment where amount <= 3;
+select * from payment where amount >= 3;
+
+select * from customer where store_id = 2;
+select * from customer where store_id != 2;
+
+select * from customer where store_id = 2 and active = 1;
+select * from customer where store_id = 1 or active = 1;
+select * from actor where not last_name = 'Peck';
+
+select * from actor where last_name  in('Olivier');
+select * from actor where last_name  not in('Cage');
+
+
+select * from city where country_id between 10 and 20;
+select * from city where country_id not between 90 and 100;
+
+
+select * from country where country like 'I%';
+select * from country where country like '%o';
+select * from country where country like 'A%a';
+
+
+select * from country where country not like 'B%';
+select * from country where country not like 'A__a%';
+select * from country where country not like '%_n';
+
+
+select * from country where country_id is Null;
+select * from country where country_id is Not Null;
+
+
+select * from film limit 10;
+select * from address offset 5;
+
+
+
